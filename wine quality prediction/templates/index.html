@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+        body { background: linear-gradient(to right, #f5f7fa, #c3cfe2); min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+
+        /* Container */
+        .container { background: #fff; padding: 40px 30px; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); width: 100%; max-width: 600px; }
+
+        /* Title */
+        h2 { text-align: center; color: #333; margin-bottom: 30px; }
+
+        /* Form styles */
+        form input[type="number"] {
+            width: 100%; padding: 12px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;
+            transition: 0.3s; font-size: 16px;
+        }
+        form input[type="number"]:focus { border-color: #4CAF50; outline: none; box-shadow: 0 0 5px rgba(76,175,80,0.5); }
+
+        /* Button */
+        button {
+            width: 100%; padding: 15px; background-color: #4CAF50; color: #fff; font-size: 18px; border: none;
+            border-radius: 10px; cursor: pointer; margin-top: 20px; transition: 0.3s;
+        }
+        button:hover { background-color: #45a049; }
+
+        /* Footer */
+        .footer { text-align: center; margin-top: 20px; color: #777; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Wine Quality Prediction</h2>
+        <form action="/predict" method="post">
+            <input type="number" step="0.01" name="fixed_acidity" placeholder="Fixed Acidity" required>
+            <input type="number" step="0.01" name="volatile_acidity" placeholder="Volatile Acidity" required>
+            <input type="number" step="0.01" name="citric_acid" placeholder="Citric Acid" required>
+            <input type="number" step="0.01" name="residual_sugar" placeholder="Residual Sugar" required>
+            <input type="number" step="0.01" name="chlorides" placeholder="Chlorides" required>
+            <input type="number" step="0.01" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide" required>
+            <input type="number" step="0.01" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide" required>
+            <input type="number" step="0.0001" name="density" placeholder="Density" required>
+            <input type="number" step="0.01" name="pH" placeholder="pH" required>
+            <input type="number" step="0.01" name="sulphates" placeholder="Sulphates" required>
+            <input type="number" step="0.01" name="alcohol" placeholder="Alcohol" required>
+            <button type="submit">Predict Quality</button>
+        </form>
+        <div class="footer">Powered by Random Forest | Wine Quality Prediction</div>
+    </div>
+</body>
+</html>
