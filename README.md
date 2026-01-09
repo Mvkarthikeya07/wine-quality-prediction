@@ -1,4 +1,4 @@
-🍷 Wine Quality Prediction System
+🍷 Predictive Modeling of Wine Quality Using Supervised Machine Learning
 
 A Machine Learning–Based Quality Assessment Web Application
 
